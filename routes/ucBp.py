@@ -1,5 +1,5 @@
-# Importando o Blueprint
-from flask import Blueprint
+# Importando o Blueprint, render_template
+from flask import Blueprint, render_template
 
 #adicionar
 from ..extensions import db
@@ -14,3 +14,5 @@ def uc_list():
 
 #adicionar para poder criar a estrutura da tabela
     # db.create_all() --------> comentar para nao criar a tabela novamente
+    ucs_query = Uc.query.all()
+    return render_template('uc_list.html', ucs = ucs_query)
