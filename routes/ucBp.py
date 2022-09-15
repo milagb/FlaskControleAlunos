@@ -10,4 +10,7 @@ ucBp = Blueprint('ucBp', __name__)
 
 @ucBp.route('/uc')
 def uc_list():
-    db.create_all()
+    # return "Teste"
+
+#adicionar para poder criar a estrutura da tabela
+    # db.create_all() --------> comentar para nao criar a tabela novamente
